@@ -1,0 +1,15 @@
+r/r 3:	$ExtentsFile
+r/r 4:	$CatalogFile
+r/r 5:	$BadBlockFile
+r/r 6:	$AllocationFile
+r/r 8:	$AttributesFile
+d/d 21:	.fseventsd
+r/r 26:	.fseventsd/0000000085c085db
+r/r 22:	.fseventsd/fseventsd-uuid
+d/d 19:	.HFS+ Private Directory Data^
+r/r 16:	.journal
+r/r 17:	.journal_info_block
+d/d 20:	.Trashes
+r/r 24:	file1.txt
+r/r 25:	file2.txt
+d/d 18:	^^^^HFS+ Private Data
