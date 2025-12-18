@@ -25,3 +25,77 @@ A beginner-friendly **Digital Forensics Automation tool** that automates forensi
 ```bash
 git clone <repo-url>
 cd digital-forensics-automation
+```
+
+2. Create virtual environment and activate:
+
+```bash
+python3 -m venv dfa
+source dfa/bin/activate
+```
+
+3. Install required Python packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Ensure Sleuth Kit and Bulk Extractor are installed on your system.
+
+## Project Structure
+
+```
+digital-forensics-automation/
+├── scripts/                   # Python automation scripts
+├── templates/                 # HTML report templates
+├── outputs/                   # Auto-generated outputs (ignored in Git)
+├── evidence/                  # Disk images (ignored in Git)
+├── dfa/                       # Virtual environment (ignored in Git)
+├── requirements.txt
+└── README.md
+```
+
+## Usage
+
+1. Add your disk image in `evidence/disk.dd`.
+2. Run file system analysis:
+
+```bash
+python scripts/run_fls.py
+python scripts/filesystem_summary.py
+```
+
+3. Run Bulk Extractor:
+
+```bash
+bulk_extractor -o outputs/bulk_extractor evidence/disk.dd
+python scripts/bulk_extractor_summary.py
+```
+
+4. Generate the final HTML report:
+
+```bash
+python scripts/generate_report.py
+```
+
+5. Open the report:
+
+```
+reports/forensic_report.html
+```
+
+## Notes
+
+- Ensure the virtual environment is activated before running scripts.
+- `outputs/`, `reports/`, `dfa/`, and `evidence/` are ignored in Git (`.gitignore`).
+
+## Future Enhancements
+
+- Automatic end-to-end workflow with a single script
+- PDF report generation
+- Timeline creation from filesystem artifacts
+- Support for multiple disk images and bulk processing
+
+## Author
+
+**Srinithi** – Engineering Student | Cybersecurity Enthusiast | Open Source
